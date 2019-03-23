@@ -7,7 +7,8 @@
 <body>
  <header>
      <nav>
-         <p>Navbar here</p>
+         <h1>${user}</h1>
+         <h2>${welcomeMessage}</h2>
      </nav>
  </header>
  <main>
