@@ -1,22 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>To-Do</title>
-</head>
-<body>
- <header>
-     <nav>
-         <h1>${user}</h1>
-         <h2>${welcomeMessage}</h2>
-     </nav>
- </header>
- <main>
-     <article>
-         <section>
-             <h1>Hello, Spring Web MVC!</h1>
-         </section>
-     </article>
- </main>
-</body>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hello Bulma!</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css">
+  </head>
+  <body>
+  <section class="section">
+    <div class="container">
+      <h1 class="title">
+        ${helloMessage}
+      </h1>
+      <p class="subtitle">
+        ${welcomeMessage}
+      </p>
+    </div>
+  </section>
+  </body>
 </html>

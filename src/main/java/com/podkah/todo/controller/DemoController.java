@@ -1,6 +1,8 @@
 package com.podkah.todo.controller;
 
+import com.podkah.todo.service.DemoService;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -11,6 +13,13 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @Controller
 public class DemoController {
 
+  private final DemoService demoService;
+
+  @Autowired
+  public DemoController(DemoService demoService) {
+    this.demoService = demoService;
+  }
+
   // http://localhost:8080/todo/hello
   @ResponseBody
   @GetMapping("/hello")
@@ -20,8 +29,10 @@ public class DemoController {
 
   @GetMapping("welcome")
   public String welcome(Model model) {
-    model.addAttribute("user", "Habib Mustofa");
+
+    model.addAttribute("helloMessage", demoService.getHelloMessage("Habib Mustofa"));
     log.info("Model: {}", model);
+
     // prefix + name + suffix
     // /WEB-INF/view/welcome.jsp
     return "welcome";
@@ -30,6 +41,6 @@ public class DemoController {
   @ModelAttribute("welcomeMessage")
   public String welcomeMessage() {
     log.info("welcomeMessage() called");
-    return "Welcome to our site! Stay update by accepting notification!";
+    return demoService.getWelcomeMessage();
   }
 }
