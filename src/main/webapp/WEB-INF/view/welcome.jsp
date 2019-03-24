@@ -3,7 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Hello Bulma!</title>
+    <title>My Todo</title>
+    <link rel="shortcut icon" href="https://lh3.googleusercontent.com/a-/AAuE7mDBCT4kYlpVhhTnSQ1fNJbUhH6RxeAOwIIr8oN7Lw=s120-p-rw-no" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css">
   </head>
   <body>
@@ -13,7 +14,7 @@
         ${helloMessage}
       </h1>
       <p class="subtitle">
-        ${welcomeMessage}
+        ${welcomeMessage} You are ${age} years old.
       </p>
     </div>
   </section>
