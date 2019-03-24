@@ -9,7 +9,7 @@ import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 
 @Slf4j
-public class WellAppInitializer implements WebApplicationInitializer {
+public class WebAppInitializer implements WebApplicationInitializer {
 
   private static final String DISPATCHER_SERVLET = "dispatcher";
 

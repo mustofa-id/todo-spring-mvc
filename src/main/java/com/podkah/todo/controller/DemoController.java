@@ -22,9 +22,9 @@ public class DemoController {
 
   // http://localhost:8080/todo/hello
   @ResponseBody
-  @GetMapping("/hello")
+  @GetMapping("hello")
   public String hello() {
-    return "hello";
+    return "<h1>Hello World!</h1>";
   }
 
   @GetMapping("welcome")
