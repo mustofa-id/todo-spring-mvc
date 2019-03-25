@@ -15,7 +15,7 @@ public class TodoData {
   private List<Todo> items = new ArrayList<>();
 
   public TodoData() {
-    IntStream.range(0, 10).forEach(i ->
+    IntStream.range(0, 5).forEach(i ->
         add(new Todo("Todo " + i, "Todo detail for todo " + i, LocalDate.now())));
   }
 
